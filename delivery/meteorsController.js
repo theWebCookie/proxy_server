@@ -1,5 +1,5 @@
 import express from 'express';
-import { fetchMeteorsUseCase } from '../usecases/fetchMeteors.js';
+import { fetchMeteorsUseCase } from '../usecases/index.js';
 import Exception from '../utils/exception.js';
 
 const router = express.Router();
