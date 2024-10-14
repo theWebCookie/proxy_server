@@ -1,10 +1,12 @@
 import express from 'express';
 import { fetchRoverPhotosUseCase } from '../usecases/index.js';
 import Exception from '../utils/exception.js';
+import { roverSchema } from '../schema/roverSchema.js';
+import { validate } from '../middleware/validation.js';
 
 const router = express.Router();
 
-router.post('/rover', async (req, res, next) => {
+router.post('/rover', validate(roverSchema), async (req, res, next) => {
   try {
     const { userId, userName, apiKey } = req.body;
 

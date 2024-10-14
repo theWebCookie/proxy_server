@@ -1,10 +1,12 @@
 import express from 'express';
 import { fetchMeteorsUseCase } from '../usecases/index.js';
 import Exception from '../utils/exception.js';
+import { meteorSchema } from '../schema/meteorSchema.js';
+import { validate } from '../middleware/validation.js';
 
 const router = express.Router();
 
-router.get('/meteors', async (req, res, next) => {
+router.get('/meteors', validate(meteorSchema), async (req, res, next) => {
   try {
     const { startDate, endDate, count, wereDangerousMeteors } = req.query;
 
