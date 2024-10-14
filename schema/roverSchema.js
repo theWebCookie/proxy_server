@@ -1,7 +1,7 @@
 import Joi from 'joi';
 
 export const roverSchema = Joi.object({
-  userId: Joi.number().required(),
+  userId: Joi.number().strict().required(),
   userName: Joi.string().required(),
   apiKey: Joi.string().required().messages({
     'any.required': 'API key is required',
