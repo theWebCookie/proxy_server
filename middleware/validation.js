@@ -6,7 +6,7 @@ export const validate = (schema) => {
     const { error } = schema.validate(data, { abortEarly: true });
 
     if (error) {
-      throw new Exception(400, `Validation error: ${error.details.map((detial) => detial.message)}`);
+      next(new Exception(400, `Validation error: ${error.details.map((detial) => detial.message)}`));
     }
 
     next();
