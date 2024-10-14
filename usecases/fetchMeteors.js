@@ -1,4 +1,4 @@
-import { getMeteorData } from '../repository/meteorRepository.js';
+import { getMeteorData } from '../repository/index.js';
 
 export const fetchMeteorsUseCase = async (startDate, endDate, count, wereDangerousMeteors) => {
   const meteorsData = await getMeteorData(startDate, endDate);
