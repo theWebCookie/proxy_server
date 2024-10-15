@@ -1,0 +1,16 @@
+{% extends 'layout.njk' %}
+{% block content %}
+<h1>{{ photo.camera.full_name }}</h1>
+<ul>
+  <li>Rover: {{ photo.rover.name }}</li>
+  <li>Status: {{ photo.rover.status }}</li>
+  <li>
+    Launch Date: {{ photo.rover.launch_date }}
+  </li>
+  <li>
+    Landing Date: {{ photo.rover.landing_date }}
+  </li>
+  <li>Earth date: {{ photo.earth_date }}</li>
+</ul>
+<img src="{{ photo.img_src }}" alt="photo" />
+{% endblock %}

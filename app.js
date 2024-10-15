@@ -8,10 +8,7 @@ import nunjucks from 'nunjucks';
 const app = express();
 
 app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.send('Server is running');
-});
+app.use(express.urlencoded({ extended: true }));
 
 app.use(meteorsController);
 app.use(roverController);

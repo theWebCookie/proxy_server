@@ -11,7 +11,7 @@ router.get('/meteors', validate(meteorSchema), async (req, res, next) => {
     const { startDate, endDate, count, wereDangerousMeteors } = req.query;
 
     const meteorList = await fetchMeteorsUseCase(startDate, endDate, Boolean(count), Boolean(wereDangerousMeteors));
-    res.render('meteors.njk', meteorList);
+    res.render('meteor/meteors.njk', meteorList);
   } catch (error) {
     next(new Exception(error.code, `Error while fetching data: ${error.message}`));
   }
