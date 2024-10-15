@@ -6,7 +6,9 @@ import { validate } from '../middleware/validation.ts'
 
 const router = express.Router()
 
-router.get('/rover/form', (req, res) => res.render('rover/roverForm.njk'))
+router.get('/rover/form', (req: Request, res: Response) =>
+  res.render('rover/roverForm.njk')
+)
 
 router.post(
   '/rover',
