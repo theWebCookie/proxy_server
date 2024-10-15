@@ -1,5 +1,5 @@
 import { Schema } from 'joi'
-import Exception from '../utils/exception'
+import Exception from '../utils/exception.ts'
 import { Request, Response, NextFunction } from 'express'
 
 export const validate = (schema: Schema) => {

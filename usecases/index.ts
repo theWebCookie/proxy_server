@@ -1,2 +1,2 @@
-export { fetchMeteorsUseCase } from './fetchMeteors'
-export { fetchRoverPhotosUseCase } from './fetchPhotos'
+export { fetchMeteorsUseCase } from './fetchMeteors.ts'
+export { fetchRoverPhotosUseCase } from './fetchPhotos.ts'

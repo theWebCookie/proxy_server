@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { config } from '../config/index'
+import { config } from '../config/index.ts'
 
 export const getRoverPhotos = async (sol: number, apiKey: string) => {
   const response = await axios.get(config.roverUrl, {

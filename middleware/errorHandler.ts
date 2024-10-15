@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import Exception from '../utils/exception'
+import Exception from '../utils/exception.ts'
 
 const errorHandler = (
   error: Exception,

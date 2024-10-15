@@ -1,8 +1,8 @@
 import express, { Request, Response, NextFunction } from 'express'
-import { fetchRoverPhotosUseCase } from '../usecases/index'
-import Exception from '../utils/exception'
-import { roverSchema } from '../schema/roverSchema'
-import { validate } from '../middleware/validation'
+import { fetchRoverPhotosUseCase } from '../usecases/index.ts'
+import Exception from '../utils/exception.ts'
+import { roverSchema } from '../schema/roverSchema.ts'
+import { validate } from '../middleware/validation.ts'
 
 const router = express.Router()
 

@@ -1,8 +1,8 @@
 import express, { Request, Response, NextFunction } from 'express'
-import { fetchMeteorsUseCase } from '../usecases/index'
-import Exception from '../utils/exception'
-import { meteorSchema } from '../schema/meteorSchema'
-import { validate } from '../middleware/validation'
+import { fetchMeteorsUseCase } from '../usecases/index.ts'
+import Exception from '../utils/exception.ts'
+import { meteorSchema } from '../schema/meteorSchema.ts'
+import { validate } from '../middleware/validation.ts'
 
 const router = express.Router()
 

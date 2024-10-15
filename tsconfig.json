@@ -11,7 +11,9 @@
     "emitDecoratorMetadata": true,
     "allowJs": false,
     "types": ["node"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   },
   "include": ["**/*.ts"],
   "exclude": ["./dist"]

@@ -1,2 +1,2 @@
-export { getMeteorData } from './meteorRepository'
-export { getRoverPhotos } from './roverRepository'
+export { getMeteorData } from './meteorRepository.ts'
+export { getRoverPhotos } from './roverRepository.ts'

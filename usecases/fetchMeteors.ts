@@ -1,4 +1,4 @@
-import { getMeteorData } from '../repository/index'
+import { getMeteorData } from '../repository/index.ts'
 
 interface FetchMeteorsResponse {
   meteorData: Array<SimpleMeteor>

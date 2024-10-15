@@ -1,8 +1,8 @@
 import express, { Application } from 'express'
-import { config } from './config/index'
-import meteorsController from './delivery/meteorsController'
-import roverController from './delivery/roverController'
-import errorHandler from './middleware/errorHandler'
+import { config } from './config/index.ts'
+import meteorsController from './delivery/meteorsController.ts'
+import roverController from './delivery/roverController.ts'
+import errorHandler from './middleware/errorHandler.ts'
 import nunjucks from 'nunjucks'
 
 const app: Application = express()
