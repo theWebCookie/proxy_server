@@ -8,5 +8,5 @@ export const getRoverPhotos = async (sol, apiKey) => {
       api_key: apiKey,
     },
   });
-  return response.data.photos[0].img_src;
+  return response.data.photos[0];
 };
