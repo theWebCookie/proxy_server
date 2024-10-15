@@ -1,14 +1,14 @@
 const errorHandler = (error, req, res, next) => {
-  console.error(error);
+  console.error(error)
 
-  const { code, message } = error;
+  const { code, message } = error
 
   res.status(code).json({
     error: {
       code,
-      message,
-    },
-  });
-};
+      message
+    }
+  })
+}
 
-export default errorHandler;
+export default errorHandler
