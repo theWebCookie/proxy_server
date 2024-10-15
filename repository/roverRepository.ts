@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { config } from '../config/index.js'
+import { config } from '../config/index.ts'
 
-export const getRoverPhotos = async (sol, apiKey) => {
+export const getRoverPhotos = async (sol: number, apiKey: string) => {
   const response = await axios.get(config.roverUrl, {
     params: {
       sol,

@@ -1,7 +1,10 @@
 import axios from 'axios'
-import { config } from '../config/index.js'
+import { config } from '../config/index.ts'
 
-export const getMeteorData = async (startDate, endDate) => {
+export const getMeteorData = async (
+  startDate: Date,
+  endDate: Date
+): Promise<any> => {
   const response = await axios.get(config.nasaUrl, {
     params: {
       startDate,

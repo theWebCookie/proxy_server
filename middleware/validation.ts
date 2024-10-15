@@ -1,7 +1,9 @@
-import Exception from '../utils/exception.js'
+import { Schema } from 'joi'
+import Exception from '../utils/exception.ts'
+import { Request, Response, NextFunction } from 'express'
 
-export const validate = (schema) => {
-  return (req, res, next) => {
+export const validate = (schema: Schema) => {
+  return (req: Request, res: Response, next: NextFunction) => {
     const data = req.method === 'GET' ? req.query : req.body
     const { error } = schema.validate(data, { abortEarly: true })
 
