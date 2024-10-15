@@ -1,11 +1,11 @@
-import express from 'express'
-import { config } from './config/index.js'
-import meteorsController from './delivery/meteorsController.js'
-import roverController from './delivery/roverController.js'
-import errorHandler from './middleware/errorHandler.js'
+import express, { Application } from 'express'
+import { config } from './config/index'
+import meteorsController from './delivery/meteorsController'
+import roverController from './delivery/roverController'
+import errorHandler from './middleware/errorHandler'
 import nunjucks from 'nunjucks'
 
-const app = express()
+const app: Application = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
