@@ -27,11 +27,9 @@ interface Meteor {
   close_approach_data: Array<CloseApproachData>
 }
 
-interface SimpleMeteor {
-  id: string
-  name: string
+interface SimpleMeteor
+  extends Pick<Meteor, 'id' | 'name' | 'is_potentially_hazardous_asteroid'> {
   diameter: number
-  is_potentially_hazardous_asteroid: boolean
   close_approach_date_full: string
   relative_velocity: number
 }
