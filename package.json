@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "@sentry/cli": "^2.37.0",
+    "@sentry/node": "^8.34.0",
+    "@sentry/profiling-node": "^8.34.0",
     "@types/eslint": "^9.6.1",
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
@@ -30,12 +33,13 @@
   },
   "type": "module",
   "scripts": {
-    "start": "nodemon",
+    "start": "nodemon && npm run sentry:sourcemaps",
     "prepare": "husky",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org godel-technologies-30 --project node-express ./ && sentry-cli sourcemaps upload --org godel-technologies-30 --project node-express ./"
   }
 }
