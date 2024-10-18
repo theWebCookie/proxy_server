@@ -13,7 +13,10 @@
     "types": ["node"],
     "esModuleInterop": true,
     "allowImportingTsExtensions": true,
-    "noEmit": true
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "inlineSources": true,
+    "sourceRoot": "/"
   },
   "include": ["**/*.ts"],
   "exclude": ["./dist"]
