@@ -2,8 +2,10 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
+const { NASA_API_BASE_URL, NASA_API_KEY, PORT } = process.env
+
 export const config = {
-  nasaUrl: `${process.env.NASA_API_BASE_URL}/neo/rest/v1/feed?api_key=${process.env.NASA_API_KEY}`,
-  roverUrl: `${process.env.NASA_API_BASE_URL}/mars-photos/api/v1/rovers/curiosity/photos`,
-  port: process.env.PORT || 4000
+  nasaUrl: `${NASA_API_BASE_URL}/neo/rest/v1/feed?api_key=${NASA_API_KEY}`,
+  roverUrl: `${NASA_API_BASE_URL}/mars-photos/api/v1/rovers/curiosity/photos`,
+  port: PORT || 4000
 }
